@@ -1,0 +1,97 @@
+body {
+  background: #171717;
+  font-family: Jost, sans-serif;
+  font-size: 1.1rem;
+}
+
+table {
+  min-width: 500px;
+  font-size: 1rem;
+
+  tr:first-child th {
+    background: #a32e03;
+    color: #fff;
+
+    & span {
+      font-family: "Victor Mono", monospace;
+      font-weight: 500;
+      color: #ccc;
+
+      & label {
+        font-family: "Victor Mono", monospace;
+        font-size: 0.75rem;
+        font-weight: 500;
+        background: #000a;
+        padding: 0.3rem;
+        border: 0;
+        color: #fff;
+        user-select: none;
+
+        & input { display: none }
+        &:has(input:checked) { background: green; }
+      }
+    }
+  }
+
+  & .subheader th {
+    background: #932e09;
+    color: #fff;
+  }
+
+  thead {
+    font-size: 1.25rem;
+  }
+
+  td {
+    background: #ccc;
+    color: #333;
+    padding: 0.5rem;
+    font-weight: bold;
+  }
+}
+
+table tbody:not(.show) :nth-child(n+2) {
+  display: none;
+}
+
+table tbody.header:not(.show) th {
+  background: #444;
+}
+
+table tbody.show {
+  display: block;
+}
+
+:where(table :is(th, td):first-child) {
+  background: #333;
+  color: #fff;
+}
+
+table :is(th, td):last-child {
+  width: 100%;
+}
+
+:where(span.static) {
+  padding: 0.25rem 0.35rem;
+  color: #fff;
+  background: #777;
+  font-family: "Victor Mono", monospace;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.boolean { background: purple; color: #fff }
+.number { background: #1659e8; color: #fff }
+.htmlelement { background: orangered }
+.promise { background: indigo; color: #fff }
+.error { background: darkred; color: #fff }
+.string { background: #e7bc12; color: #111 }
+.function { background: #444; color: #fff }
+.symbol { background: #666; color: #eee }
+.object { background: #0e0e45; color: #fff }
+.array { background: #c21711; color: #fff }
+.set, .weakset { background: #c4591b; color: #fff }
+.map, .weakmap { background: #0c7613; color: #fff }
+.date { background: #7e1fc2; color: #fff }
+.regexp { background: #b96161; color: #fff }

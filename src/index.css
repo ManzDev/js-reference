@@ -1,0 +1,27 @@
+html,
+body,
+.container {
+  min-height: 90vh;
+}
+
+body {
+  background: #171717;
+  font-family: Jost, sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  place-items: center;
+  max-width: 1024px;
+  margin: auto;
+}
+
+input[type="text"] {
+  background: transparent;
+  border: 1px solid #666;
+  font-family: Jost, sans-serif;
+  font-size: 1.25rem;
+  padding: 0.5rem 0.75rem;
+  color: #fff;
+}
